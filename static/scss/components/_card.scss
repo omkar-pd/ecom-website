@@ -1,0 +1,24 @@
+.card {
+  max-width: 360px;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 5px;
+  background: white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  & img {
+    // max-width: 340px;
+    max-height: 380px;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  & p {
+    padding: 5px;
+    margin-top: 5px;
+  }
+}

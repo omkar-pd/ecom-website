@@ -1,0 +1,51 @@
+button {
+  cursor: pointer;
+}
+nav {
+  & button {
+    border: transparent;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  & .import,
+  & .filter {
+    margin: 0 6px;
+    background: white;
+  }
+  & .download-report {
+    margin: 0 6px;
+    border: 1px solid black;
+
+    color: white;
+    background-color: $main-button-color;
+  }
+  & i {
+    padding: 0 5px;
+    margin-right: 5px;
+  }
+}
+
+.right-menu {
+  & .search-box {
+    & button {
+      width: 70px;
+      height: 45px;
+      color: white;
+      border: 2px solid $body-bg;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border-left: none;
+      background: $main-button-color;
+    }
+  }
+}
+
+.apply-filter {
+  width: 234px;
+  height: 45px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: white;
+  background: $main-button-color;
+}
