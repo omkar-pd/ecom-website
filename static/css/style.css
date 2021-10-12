@@ -105,7 +105,6 @@ nav .heading span {
 }
 .card img {
   max-height: 380px;
-  object-fit: cover;
   width: 100%;
   height: auto;
   border-top-left-radius: 5px;
