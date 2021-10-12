@@ -8,7 +8,7 @@ if (isset($_POST['apply-filter'])) {
     $query = "SELECT products.name FROM products
     INNER JOIN category ON products.category_id = category.category_id
     INNER JOIN subcategory ON subcategory.subcategoryid=products.subcategory_id
-    WHERE subcategory.name='$category' AND products.price<100";
+    WHERE subcategory.name IN ('Western Wear','Foot Wear')  AND products.price<100";
 
     // $query = "SELECT name from products where price BETWEEN 40 AND 100";
     $result = mysqli_query($conn, $query);
