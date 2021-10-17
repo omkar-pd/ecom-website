@@ -27,17 +27,17 @@
     <div class="wrapper">
         <div class="card-container">
             <div class="card">
-                <img src="./static/images/men2.jpg" alt="" />
+                <img src="./static/images/womenTshirt.jpg" alt="" />
                 <p>Red T-Shirt</p>
                 <p>₹1,999</p>
             </div>
             <div class="card">
-                <img src="./static/images/men2.jpg" alt="" />
+                <img src="./static/images/men1.jpg" alt="" />
                 <p>Red T-Shirt</p>
                 <p>₹1,999</p>
             </div>
             <div class="card">
-                <img src="./static/images/men2.jpg" alt="" />
+                <img src="./static/images/book.jpg" alt="" />
                 <p>Red T-Shirt</p>
                 <p>₹1,999</p>
             </div>
@@ -114,8 +114,8 @@
                     </div>
                     <div class="prices">
                         <p>Price</p>
-                        <input type="radio" id="under-25" name="price" value="25" />
-                        <label for="under-25">Under $25</label><br />
+                        <input type="radio" id="under-25" name="price" value="0-25" />
+                        <label for="0-25">Under $25</label><br />
                         <input type="radio" id="25-50" name="price" value="25-50" />
                         <label for="25-50">$25 to $50</label><br />
                         <input type="radio" id="50-100" name="price" value="50-100" />
