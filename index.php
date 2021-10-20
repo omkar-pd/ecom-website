@@ -26,51 +26,14 @@
     </nav>
     <div class="wrapper">
         <div class="card-container">
+            <?php
+            foreach ($products as $row) { ?>
             <div class="card">
-                <img src="./static/images/womenTshirt.jpg" alt="" />
-                <p>Red T-Shirt</p>
-                <p>₹1,999</p>
+                <img src="./static/images/<?php echo $row["main_image"] ?>" alt="" />
+                <p><?php echo $row["name"] ?></p>
+                <p><?php echo $row["price"] ?></p>
             </div>
-            <div class="card">
-                <img src="./static/images/men1.jpg" alt="" />
-                <p>Red T-Shirt</p>
-                <p>₹1,999</p>
-            </div>
-            <div class="card">
-                <img src="./static/images/book.jpg" alt="" />
-                <p>Red T-Shirt</p>
-                <p>₹1,999</p>
-            </div>
-            <div class="card">
-                <img src="./static/images/men2.jpg" alt="" />
-                <p>Red T-Shirt</p>
-                <p>₹1,999</p>
-            </div>
-            <div class="card">
-                <img src="./static/images/men2.jpg" alt="" />
-                <p>Red T-Shirt</p>
-                <p>₹1,999</p>
-            </div>
-            <div class="card">
-                <img src="./static/images/men2.jpg" alt="" />
-                <p>Red T-Shirt</p>
-                <p>₹1,999</p>
-            </div>
-            <div class="card">
-                <img src="./static/images/men2.jpg" alt="" />
-                <p>Red T-Shirt</p>
-                <p>₹1,999</p>
-            </div>
-            <div class="card">
-                <img src="./static/images/men2.jpg" alt="" />
-                <p>Red T-Shirt</p>
-                <p>₹1,999</p>
-            </div>
-            <div class="card">
-                <img src="./static/images/men2.jpg" alt="" />
-                <p>Red T-Shirt</p>
-                <p>₹1,999</p>
-            </div>
+            <?php } ?>
         </div>
         <div class="right-menu">
             <div class="search-box">
@@ -85,13 +48,15 @@
                         <select name="mens">
                             <option value="">All categories</option>
                             <option value="Foot Wear">Foot Wear</option>
+                            <option value="Top Wear">Top Wear</option>
                         </select>
                     </div>
                     <div class="category">
                         <span>Women</span><select name="women">
                             <option value="">All categories</option>
                             <option value="Western Wear">Western Wear</option>
-                            <option value="beauty groming">Beauty Groming</option>
+                            <option value="Bottom Wear">Bottom Wear</option>
+                            <option value="Beauty Groming">Beauty Groming</option>
                         </select>
                     </div>
                     <div class="category">
@@ -103,13 +68,13 @@
                     <div class="category">
                         <span>Electronics</span><select name="electronics">
                             <option value="">All categories</option>
-                            <option value="mobiles">Mobiles</option>
+                            <option value="Mobiles">Mobiles</option>
                         </select>
                     </div>
                     <div class="category">
                         <span>Sport,Books & More</span><select name="sports_books_more">
                             <option value="">All categories</option>
-                            <option value="gaming">Gaming</option>
+                            <option value="Gaming">Gaming</option>
                         </select>
                     </div>
                     <div class="prices">
