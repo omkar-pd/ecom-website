@@ -1,3 +1,4 @@
+<?php include('./includes/config.php') ?>
 <?php include('./includes/fetch.php') ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +15,7 @@
 <body>
     <nav>
         <div class="heading">
-            <h2>Products</h2>
+            <a href="index.php"><h2>Products</h2></a>
             <span>Ecommerce / Products</span>
         </div>
         <div>
@@ -31,50 +32,74 @@
             <div class="card">
                 <img src="./static/images/<?php echo $row["main_image"] ?>" alt="" />
                 <p><?php echo $row["name"] ?></p>
-                <p><?php echo $row["price"] ?></p>
+                <p class="price">$<?php echo $row["price"] ?></p>
             </div>
             <?php } ?>
         </div>
-        <div class="right-menu">
+        <div class="right-menu ">
             <div class="search-box">
                 <input type="text" placeholder="Search ..." /> <button>Search</button>
             </div>
             <div class="categories-wrapper">
                 <h3>Categories</h3>
                 <hr />
-                <form action="index.php" method="POST">
+                <form action="index.php" method="POST" id="form">
                     <div class="category">
                         <span>Mens</span>
                         <select name="mens">
                             <option value="">All categories</option>
                             <option value="Foot Wear">Foot Wear</option>
                             <option value="Top Wear">Top Wear</option>
+                            <option value="Bottom Wear">Bottom Wear</option>
+                            <option value="Men's Groming">Men's Groming</option>
+                            <option value="Accessories">Accessories</option>
+
+
                         </select>
                     </div>
                     <div class="category">
                         <span>Women</span><select name="women">
                             <option value="">All categories</option>
                             <option value="Western Wear">Western Wear</option>
+                            <option value="Top Wear">Top Wear</option>
                             <option value="Bottom Wear">Bottom Wear</option>
                             <option value="Beauty Groming">Beauty Groming</option>
+                            <option value="Accessories">Accessories</option>
+
                         </select>
                     </div>
                     <div class="category">
                         <span>Baby & Kids</span><select name="baby_and_kids">
                             <option value="">All categories</option>
-                            <option value="toys">Toys</option>
+                            <option value="Boys Clothing">Boys Clothing</option>
+                            <option value="Girls Clothing">Girls Clothing</option>
+                            <option value="Toys">Toys</option>
+                            <option value="Baby Care">Baby Care</option>
+                            <option value="Kids Footware">Kids Footware</option>
+
+
                         </select>
                     </div>
                     <div class="category">
                         <span>Electronics</span><select name="electronics">
                             <option value="">All categories</option>
                             <option value="Mobiles">Mobiles</option>
+                            <option value="Laptop">Laptop</option>
+                            <option value="Gaming & Accessories">Gaming & Accessories</option>
+                            <option value="Health Care Appliances">Health Care Appliances</option>
+
+
+
                         </select>
                     </div>
                     <div class="category">
-                        <span>Sport,Books & More</span><select name="sports_books_more">
+                        <span>Sport,Books & More</span>
+                        <select name="sports_books_more">
                             <option value="">All categories</option>
+                            <option value="Books">Books</option>
                             <option value="Gaming">Gaming</option>
+                            <option value="Music">Music</option>
+                            <option value="Excersice & Fitness">Excersice & Fitness</option>
                         </select>
                     </div>
                     <div class="prices">
@@ -88,11 +113,12 @@
                         <input type="radio" id="other" name="price" value="Other" />
                         <label for="other">Other (Specify)</label><br /><br />
                     </div>
-                    <button class="apply-filter" name="apply-filter">Apply Filter</button>
-            </div>
+                    <button class="apply-filter" name="apply-filter" disabled>Apply Filter</button>
+                </div>
             </form>
         </div>
     </div>
+    <script src="./static/js/script.js"></script>
 </body>
 
 </html>

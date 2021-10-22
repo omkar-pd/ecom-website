@@ -49,3 +49,11 @@ nav {
   color: white;
   background: $main-button-color;
 }
+.filter {
+  display: none;
+}
+@media only screen and(max-width:768px) {
+  .filter {
+    display: inline;
+  }
+}

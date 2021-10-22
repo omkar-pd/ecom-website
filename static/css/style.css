@@ -32,7 +32,7 @@ body {
   margin: 5px;
 }
 .wrapper .right-menu .search-box {
-  width: 300px;
+  width: 330px;
   height: 90px;
   display: flex;
   align-items: center;
@@ -51,7 +51,7 @@ body {
   border-right: none;
 }
 .wrapper .right-menu .categories-wrapper {
-  width: 300px;
+  width: 330px;
   margin-top: 25px;
   padding: 20px 0px 20px 35px;
   border-radius: 10px;
@@ -63,12 +63,40 @@ body {
 .wrapper .right-menu .categories-wrapper hr {
   margin-left: -33px;
 }
-
-.right-menu .category,
-.prices {
-  padding: 25px 0px 10px 0;
+.wrapper .right-menu .categories-wrapper .category {
+  padding-top: 15px;
 }
 
+@media only screen and (min-width: 1100px) {
+  .card-container div:nth-child(2) {
+    margin-left: 45px;
+  }
+
+  .card-container div:nth-child(3) {
+    margin-left: 45px;
+  }
+
+  .card-container div:nth-child(5) {
+    margin-left: 45px;
+  }
+
+  .card-container div:nth-child(6) {
+    margin-left: 45px;
+  }
+
+  .card-container div:nth-child(8) {
+    margin-left: 45px;
+  }
+
+  .card-container div:nth-child(9) {
+    margin-left: 45px;
+  }
+
+  .right-menu .category,
+.prices {
+    padding: 25px 0px 10px 0;
+  }
+}
 .right-menu .prices * {
   margin-top: 8px;
 }
@@ -79,12 +107,23 @@ body {
   border-color: red;
 }
 
+@media only screen and (max-width: 768px) {
+  .right-menu,
+.import {
+    display: none;
+  }
+
+  .card-container {
+    justify-content: center;
+  }
+}
 nav {
   display: flex;
   justify-content: space-between;
   padding: 20px 50px 20px 20px;
 }
-nav .heading {
+nav .heading a {
+  text-decoration: none;
   color: #1c124e;
 }
 nav .heading span {
@@ -93,12 +132,12 @@ nav .heading span {
 }
 
 .card {
-  max-width: 360px;
+  max-width: 304px;
+  width: 100%;
   display: flex;
-  flex-grow: 1;
   flex-direction: column;
   align-items: center;
-  margin: 10px 5px;
+  margin: 10px;
   background: white;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -113,6 +152,10 @@ nav .heading span {
 .card p {
   padding: 5px;
   margin-top: 5px;
+  text-align: center;
+}
+.card .price {
+  color: grey;
 }
 
 button {
@@ -160,6 +203,15 @@ nav i {
   background: #625bc5;
 }
 
+.filter {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .filter {
+    display: inline;
+  }
+}
 select {
   display: block;
   width: 232px;
@@ -170,6 +222,7 @@ select {
   border: 2px solid #9399b1;
   border-radius: 5px;
   appearance: none;
+  background-color: transparent;
   background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%);
   background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
   background-size: 5px 5px, 5px 5px, 1px 1.5em;
@@ -182,4 +235,21 @@ select:focus {
   background-size: 5px 5px, 5px 5px, 1px 1.5em;
   background-repeat: no-repeat;
   outline: 0;
+}
+
+.column-reverse {
+  flex-direction: column-reverse;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.show {
+  display: block;
+  margin: 0 auto !important;
+}
+
+.hide {
+  display: none;
 }
