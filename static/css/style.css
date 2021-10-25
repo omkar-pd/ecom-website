@@ -237,8 +237,24 @@ select:focus {
   outline: 0;
 }
 
+.right-menu .prices .input-wrapper {
+  display: flex;
+}
+.right-menu .prices .input-wrapper input[type=number] {
+  width: 130px;
+  padding: 8px;
+  margin: 0 5px;
+  margin-bottom: 12px;
+  border-radius: 5px;
+}
+
 .column-reverse {
   flex-direction: column-reverse;
+}
+@media only screen and (min-width: 768px) {
+  .column-reverse {
+    flex-direction: row;
+  }
 }
 
 .row {

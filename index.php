@@ -48,24 +48,21 @@
                         <span>Mens</span>
                         <select name="mens">
                             <option value="">All categories</option>
-                            <option value="Foot Wear">Foot Wear</option>
-                            <option value="Top Wear">Top Wear</option>
-                            <option value="Bottom Wear">Bottom Wear</option>
-                            <option value="Men's Groming">Men's Groming</option>
-                            <option value="Accessories">Accessories</option>
-
-
+                            <option value="men-Foot Wear">Foot Wear</option>
+                            <option value="men-Top Wear">Top Wear</option>
+                            <option value="men-Bottom Wear">Bottom Wear</option>
+                            <option value="men-Men's Groming">Men's Groming</option>
+                            <option value="men-Accessories">Accessories</option>
                         </select>
                     </div>
                     <div class="category">
                         <span>Women</span><select name="women">
                             <option value="">All categories</option>
-                            <option value="Western Wear">Western Wear</option>
-                            <option value="Top Wear">Top Wear</option>
-                            <option value="Bottom Wear">Bottom Wear</option>
-                            <option value="Beauty Groming">Beauty Groming</option>
-                            <option value="Accessories">Accessories</option>
-
+                            <option value="women-Western Wear">Western Wear</option>
+                            <option value="women-Top Wear">Top Wear</option>
+                            <option value="women-Bottom Wear">Bottom Wear</option>
+                            <option value="women-Beauty Groming">Beauty Groming</option>
+                            <option value="women-Accessories">Accessories</option>
                         </select>
                     </div>
                     <div class="category">
@@ -76,8 +73,6 @@
                             <option value="Toys">Toys</option>
                             <option value="Baby Care">Baby Care</option>
                             <option value="Kids Footware">Kids Footware</option>
-
-
                         </select>
                     </div>
                     <div class="category">
@@ -87,9 +82,6 @@
                             <option value="Laptop">Laptop</option>
                             <option value="Gaming & Accessories">Gaming & Accessories</option>
                             <option value="Health Care Appliances">Health Care Appliances</option>
-
-
-
                         </select>
                     </div>
                     <div class="category">
@@ -110,11 +102,11 @@
                         <label for="25-50">$25 to $50</label><br />
                         <input type="radio" id="50-100" name="price" value="50-100" />
                         <label for="50-100">50$ to $100</label><br />
-                        <input type="radio" id="other" name="price" value="Other" />
+                        <input type="radio" id="other" name="price" value="Other" class="other"/>
                         <label for="other">Other (Specify)</label><br /><br />
-                    </div>
-                    <button class="apply-filter" name="apply-filter" disabled>Apply Filter</button>
+                     
                 </div>
+                <button class="apply-filter" name="apply-filter" disabled>Apply Filter</button>
             </form>
         </div>
     </div>

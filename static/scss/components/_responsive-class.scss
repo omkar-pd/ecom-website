@@ -1,5 +1,10 @@
 .column-reverse {
   flex-direction: column-reverse;
+  @media only screen and(min-width:768px) {
+    & {
+      flex-direction: row;
+    }
+  }
 }
 .row {
   flex-direction: row;
