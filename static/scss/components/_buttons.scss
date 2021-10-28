@@ -57,3 +57,22 @@ nav {
     display: inline;
   }
 }
+
+.product-details {
+  & .add-to-cart,
+  .buy-now {
+    width: 150px;
+    height: 40px;
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
+  }
+  & .add-to-cart {
+    background-color: $add-to-cart-bg;
+  }
+  & .buy-now {
+    background-color: $buy-now-bg;
+  }
+}

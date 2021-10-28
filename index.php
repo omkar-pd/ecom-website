@@ -15,7 +15,9 @@
 <body>
     <nav>
         <div class="heading">
-            <a href="index.php"><h2>Products</h2></a>
+            <a href="index.php">
+                <h2>Products</h2>
+            </a>
             <span>Ecommerce / Products</span>
         </div>
         <div>
@@ -30,8 +32,10 @@
             <?php
             foreach ($products as $row) { ?>
             <div class="card">
-                <img src="./static/images/<?php echo $row["main_image"] ?>" alt="" />
-                <p><?php echo $row["name"] ?></p>
+                <a href="details.php?product_id=<?php echo $row['product_id'] ?>">
+                    <img src="./static/images/<?php echo $row["main_image"] ?>" alt="" />
+                    <p><?php echo $row["name"] ?></p>
+                </a>
                 <p class="price">$<?php echo $row["price"] ?></p>
             </div>
             <?php } ?>
@@ -102,15 +106,15 @@
                         <label for="25-50">$25 to $50</label><br />
                         <input type="radio" id="50-100" name="price" value="50-100" />
                         <label for="50-100">50$ to $100</label><br />
-                        <input type="radio" id="other" name="price" value="Other" class="other"/>
+                        <input type="radio" id="other" name="price" value="Other" class="other" />
                         <label for="other">Other (Specify)</label><br /><br />
-                     
-                </div>
-                <button class="apply-filter" name="apply-filter" disabled>Apply Filter</button>
-            </form>
+
+                    </div>
+                    <button class="apply-filter" name="apply-filter" disabled>Apply Filter</button>
+                </form>
+            </div>
         </div>
-    </div>
-    <script src="./static/js/script.js"></script>
+        <script src="./static/js/script.js"></script>
 </body>
 
 </html>
