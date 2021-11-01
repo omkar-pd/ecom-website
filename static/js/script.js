@@ -24,7 +24,7 @@ filter.addEventListener("click", () => {
   rightMenu.classList.toggle("show");
 });
 if (other) {
-  other.addEventListener("change", () => {
+  other.addEventListener("click", function createInput() {
     if (other.checked) {
       const input = document.createElement("input");
       const input1 = document.createElement("input");
@@ -42,6 +42,7 @@ if (other) {
         other.value = price;
       });
     }
+    other.removeEventListener("click", createInput);
   });
 }
 
