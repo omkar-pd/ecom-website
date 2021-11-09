@@ -1,5 +1,14 @@
 <?php include('./includes/config.php') ?>
 <?php include('./includes/fetch.php') ?>
+<?php 
+    if (isset($_POST['apply-filter'])) {
+            $product=new fetch();
+            $products=$product->fetch_products();
+        } else {
+            $product=new fetch();
+            $products=$product->fetch_all();
+        }
+?>
 <!DOCTYPE html>
 <html lang="en">
 

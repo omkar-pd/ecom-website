@@ -2,7 +2,8 @@
 <?php include('./includes/fetch.php') ?>
 
 <?php $product_id = $_GET['product_id'];
- $details=fetchDetails($product_id);
+$product=new fetch();
+ $details=$product->fetchDetails($product_id);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,37 +32,60 @@
             </button>
         </div>
     </nav>
-    <?php foreach($details as $row) {?>
     <section class="product-details">
-        <div class="images">
-            <div class="image-thumbnails"><img src="./static/images/<?php echo $row['main_image']; ?> "
-                    alt="image1"><img src="./static/images/<?php echo $row['image2']; ?>" alt="image2"><img
-                    src="./static/images/<?php echo $row['image3']; ?>" alt="image3"><img
-                    src="./static/images/<?php echo $row['image4']; ?>" alt="image4">
-            </div>
-            <div class="large-image-wrapper">
-                <img class="large-image" src="./static/images/<?php echo $row['main_image']; ?>" alt="image">
-                <div class="buttons-wrapper">
-                    <button class="add-to-cart"><i class="bi bi-cart"></i>Add to cart</button>
-                    <button class="buy-now"><i class="bi bi-wallet"></i>Buy Now</button>
+        <?php foreach($details as $row) {?>
+        <div class="details-wrapper">
+            <div class="images">
+                <div class="image-thumbnails"><img src="./static/images/<?php echo $row['main_image']; ?> "
+                        alt="image1"><img src="./static/images/<?php echo $row['image2']; ?>" alt="image2"><img
+                        src="./static/images/<?php echo $row['image3']; ?>" alt="image3"><img
+                        src="./static/images/<?php echo $row['image4']; ?>" alt="image4">
+                </div>
+                <div class="large-image-wrapper">
+                    <img class="large-image" src="./static/images/<?php echo $row['main_image']; ?>" alt="image">
+                    <div class="buttons-wrapper">
+                        <button class="add-to-cart"><i class="bi bi-cart"></i>Add to cart</button>
+                        <button class="buy-now"><i class="bi bi-wallet"></i>Buy Now</button>
+                    </div>
                 </div>
             </div>
+            <div class="details">
+                <h2 class="product-name"><?php echo $row['name']?></h2>
+                <p class="product-price">Price : $ <?php echo $row['price']?> USD </p>
+                <h4>Description</h4>
+                <p class="product-desc"><?php echo $row['description']?></p>
+                <label for="quantity">Quantity</label>
+                <select name="quantity" id="">
+                    <option value="1">1</option>
+                    <option value="3">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
         </div>
-        <div class="details">
-            <h2 class="product-name"></h2>
-            <p class="product-price">Price : $ USD </p>
-            <h4>Description</h4>
-            <p class="product-desc"></p>
-            <label for="quantity">Quantity</label>
-            <select name="quantity" id="">
-                <option value="1">1</option>
-                <option value="3">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-            </select>
+        <?php } ?>
+        <div class="specifications">
+            <table border="2">
+                <tr>
+                    <th>Category</th>
+                    <td>Lorem ipsum dolor sit amet.</td>
+                </tr>
+                <tr>
+                    <th>Brand</th>
+                    <td>Color</td>
+                </tr>
+                <tr>
+                    <th>Connections</th>
+                    <td>Lorem ipsum dolor sit amet.</td>
+                </tr>
+                <tr>
+                    <th>Warrenty Summary</th>
+                    <td>Lorem ipsum dolor sit amet.</td>
+                </tr>
+
+            </table>
         </div>
     </section>
-    <?php } ?>
 </body>
 <script src="./static/js/script.js"></script>
 
